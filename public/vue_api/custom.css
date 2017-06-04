@@ -1,0 +1,124 @@
+table, th, td{
+    text-align: center;
+}
+th span i{
+    float: right;
+    color: #42b983;
+}
+th{
+    background-color: #00d1b2;
+    color: #fff;
+}
+.filter{
+    margin-bottom: 25px;
+}
+.btn{
+    background-color: #00d1b2;
+    border: none;
+    color: #ffffff;
+}
+.btn:hover{
+    color:#000;
+    background-color: #e8efec;
+}
+.add{
+    background-color: #fff;
+    color: #000;
+}
+
+/* Modal */
+
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.modal-container {
+    width: 800px;
+    margin: 0px auto;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+    margin-top: 0;
+    float: left;
+}
+
+.modal-body {
+    margin: 20px 0;
+}
+
+.modal-default-button {
+    float: right;
+}
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*Transion effect */
+.customers-enter-active, .customers-leave-active {
+     transition: all 1s;
+}
+.customers-enter, .customers-leave-to /* .list-leave-active for <2.1.8 */ {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Message */
+.message {
+    background-color: #4fc08d;
+    overflow: hidden;
+    width: 230px;
+    text-align: center;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 9999;
+}
+.message h4{
+    color: #fff;
+    float: left;
+}
+
+.message i {
+    color: #fff;
+    font-size:20px;
+    margin: 10px;
+}
+
+.message-content{
+    padding: 15px 20px;
+}
+
+.message:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 1s;
+}
