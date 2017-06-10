@@ -66,12 +66,12 @@ template:`
                 </div>
             </div>
         </transition>
-         <div class="message" v-show="messeageSuccess.success">
-            <div class="message-content">
-                <h4>{{messeageSuccess.title}}</h4>
-                <span><i class="fa fa-check" aria-hidden="true"></i></span>
-            </div>
-        </div>
+        <div class="message" v-show="messeageSuccess.success" @click="messeageSuccess.success = false">
+           <div class="message-content">
+               <h4>{{messeageSuccess.title}}</h4>
+               <span><i class="fa fa-check" aria-hidden="true"></i></span>
+           </div>
+       </div>  
     </div>
     `,
         data(){
@@ -104,7 +104,8 @@ template:`
                 axios.delete('api/delete/' + idDelete)
                 .then(response => {
                     this.customers.splice(key, 1);
-                     this.messeageSuccess.push({success:true,title:'Deleted Successfully'});
+                    this.messeageSuccess.success=true;
+                    this.messeageSuccess.title="Deleted Successfully";
                 })
                 .catch(error => console.log(error));
             },
